@@ -36,12 +36,12 @@ body {
   padding: 20px;
   border-bottom: 1px solid var(--light-tan);
   /*box-shadow: 2px 3px 5px rgba(30, 51, 63, 0.2);*/
+  align-items: center;
 }
 
 .page-header__item {
   flex: 0 1 200px;
   width: 20%;
-  height: 20%;
 }
 
 .page-header .page-header__item:last-child {
