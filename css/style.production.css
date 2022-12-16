@@ -1,11 +1,4 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/*
 COLORS
 Offwhite: #fafafa (background)
 Light Tan: #DFD3C3
@@ -17,7 +10,6 @@ font-family: 'Fira Code', monospace;
 */
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -31,8 +23,6 @@ body {
 }
 
 .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px;
@@ -41,16 +31,12 @@ body {
 }
 
 .page-header__item {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
   flex: 0 1 200px;
   width: 20%;
   height: 20%;
 }
 
 .page-header .page-header__item:last-child {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: right;
 }
@@ -66,6 +52,11 @@ body {
 
 h1 {
   font-size: 3vw;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .profile {
@@ -88,8 +79,6 @@ h1 {
 
 a {
   color: #8a7e70;
-  -webkit-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -120,10 +109,7 @@ button {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 2px 3px 5px rgba(30, 51, 63, 0.2);
   box-shadow: 2px 3px 5px rgba(30, 51, 63, 0.2);
-  -webkit-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -136,10 +122,7 @@ button {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 2px 3px 5px rgba(30, 51, 63, 0.2);
   box-shadow: 2px 3px 5px rgba(30, 51, 63, 0.2);
-  -webkit-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -159,20 +142,13 @@ button:focus,
 
 .page-footer {
   clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
 }
 
 svg {
   fill: #1e333f;
-  -webkit-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -190,9 +166,7 @@ svg:hover {
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
@@ -207,22 +181,11 @@ svg:hover {
 }
 
 .space-needle {
-  -webkit-animation: 4s color-change infinite alternate linear;
   animation: 4s color-change infinite alternate linear;
 }
 
 .ship {
-  -webkit-animation: 30s go-sailing infinite alternate linear;
   animation: 30s go-sailing infinite alternate linear;
-}
-
-@-webkit-keyframes color-change {
-  0% {
-    fill: #0a1629;
-  }
-  100% {
-    fill: #8f9eb6;
-  }
 }
 
 @keyframes color-change {
@@ -234,39 +197,20 @@ svg:hover {
   }
 }
 
-@-webkit-keyframes go-sailing {
-  50% {
-    -webkit-transform: translate(0%);
-    transform: translate(0%);
-  }
-  100% {
-    -webkit-transform: translate(50%);
-    transform: translate(50%);
-  }
-  0% {
-    -webkit-transform: translate(100%);
-    transform: translate(100%);
-  }
-}
-
 @keyframes go-sailing {
   50% {
-    -webkit-transform: translate(0%);
     transform: translate(0%);
   }
   100% {
-    -webkit-transform: translate(50%);
     transform: translate(50%);
   }
   0% {
-    -webkit-transform: translate(100%);
     transform: translate(100%);
   }
 }
 
 @media all and (max-width: 500px) {
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 10px;
   }
@@ -281,13 +225,11 @@ svg:hover {
 
 @media all and (max-width: 500px) {
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
-    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }

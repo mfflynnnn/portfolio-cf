@@ -62,6 +62,11 @@ h1 {
   font-size: 3vw;
 }
 
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
